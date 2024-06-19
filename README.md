@@ -23,9 +23,9 @@ git rebase origin/trunk`
 Альтернативно - это можно сделать в gitlab/github, там есть функциональность squash and merge.
 
 Полезные команды:
-git branch -a - показать список веток
-git log --graph --oneline --decorate - посмотреть историю коммитов в виде графика
-git commit --ammend -m "Описание коммита" - изменить описание последнего коммита.
+`git branch -a` - показать список веток
+`git log --graph --oneline --decorate` - посмотреть историю коммитов в виде графика
+`git commit --ammend -m "Описание коммита"` - изменить описание последнего коммита.
 
 ![img.png](img.png)
 
