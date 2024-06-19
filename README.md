@@ -16,19 +16,18 @@
 1. Вмёрдживаем основную ветку к себе
 `git fetch
 git merge origin/trunk`
-2. 1
+2. Делаем squash (один из способов, как по мне самый простой)
 `git reset --soft $(git merge-base master HEAD)
 git commit -m "TASK-123 Добавлен один красивый коммит"
-git rebase origin/trunk
-`
+git rebase origin/trunk`
+3. Пушим свои изменения
+`git push --force-with-lease`
+
 git branch -a - показать список веток
 
 git log --graph --oneline --decorate - посмотреть историю коммитов в виде графика
 
-Самый простой способ 
-
-
-
+Самый простой способ
 
 ![img.png](img.png)
 
