@@ -65,7 +65,25 @@ git commit --ammend -m "Описание коммита"
 git diff HEAD..origin/trunk
 ```
 
-## Линейная или нелинейная история 
+#### Удалить локальную и удалённую ветку
+```bash
+git push origin -d <имя_ветки>
+git branch -D <имя_ветки>
+```
+
+#### Установить и запушить тэг
+```bash
+git tag <x.y.z>
+git push origin --tags
+```
+Дополнительно: [семантическое версионирование](https://semver.org/lang/ru/)
+
+#### Перенести коммит из одной ветки в другую
+```bash
+git cherry-pick <хэш-коммита>
+```
+
+## Линейная или нелинейная история: rebase или merge?
 
 ![liner.png](linear.png)
 
