@@ -8,6 +8,8 @@ TL;DR: тесты, автоматизация, декомпозиция - час
 
 git классный
 
+git отстой
+
 ### Создаём ветку  
 ```bash
 git checkout -b feature/TASK-123 --no-track origin/trunk
