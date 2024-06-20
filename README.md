@@ -16,8 +16,7 @@
 git merge origin/trunk`
 2. Делаем squash (один из способов, как по мне самый простой)
 `git reset --soft $(git merge-base master HEAD)
-git commit -m "TASK-123 Добавлен один красивый коммит"
-git rebase origin/trunk`
+git commit -m "TASK-123 Добавлен один красивый коммит"`
 3. Пушим свои изменения
 `git push --force-with-lease`
 Альтернативно - это можно сделать в gitlab/github, там есть функциональность squash and merge.
