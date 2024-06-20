@@ -88,3 +88,7 @@ git cherry-pick <хэш-коммита>
 ![liner.png](linear.png)
 
 ![merge_commits.png](merge_commits.png)
+
+## Попрактиковаться в git
+
+https://learngitbranching.js.org
