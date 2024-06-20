@@ -17,7 +17,7 @@ TBD, CI, проектирование - как это всё связано
 `git fetch
 git merge origin/trunk`
 2. Делаем squash (один из способов, как по мне самый простой)
-`git reset --soft $(git merge-base master HEAD)
+`git reset --soft $(git merge-base trunk HEAD)
 git commit -m "TASK-123 Добавлен один красивый коммит"`
 3. Пушим свои изменения
 `git push --force-with-lease`
@@ -27,6 +27,7 @@ git commit -m "TASK-123 Добавлен один красивый коммит"
 `git branch -a` - показать список веток
 `git log --graph --oneline --decorate` - посмотреть историю коммитов в виде графика
 `git commit --ammend -m "Описание коммита"` - изменить описание последнего коммита.
+`git diff HEAD..origin/trunk` - посмотреть изменения между текущей веткой и trunk
 
 ![img.png](img.png)
 
