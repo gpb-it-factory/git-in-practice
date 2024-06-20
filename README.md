@@ -1,34 +1,70 @@
 # git-in-practice
 
-TBD, CI, проектирование - как это всё связано
+TBD, CI, проектирование - всё это помогает нам лучше и быстрее разрабатывать и приносить пользу клиентам.
 
-Создаём ветку
-`git checkout -b feature/TASK-123 --no-track origin/trunk`
-Создаём ветку в origin
-`git push -u origin $(git branch --show-current)`
+## Стандартный флоу работы
 
-Вносим изменения и добавляем их в отслеживаемые
-`git add .`
-`git commit -m TASK-123 Добавлена важная доработка`
-`git push`
+### Создаём ветку  
+```bash
+git checkout -b feature/TASK-123 --no-track origin/trunk
+```
 
-Готовим ветку к Pull Request:
-1. Вмёрдживаем основную ветку к себе
-`git fetch
-git merge origin/trunk`
-2. Делаем squash (один из способов, как по мне самый простой)
-`git reset --soft $(git merge-base trunk HEAD)
-git commit -m "TASK-123 Добавлен один красивый коммит"`
-3. Пушим свои изменения
-`git push --force-with-lease`
-Альтернативно - это можно сделать в gitlab/github, там есть функциональность squash and merge.
+### Создаём ветку в origin  
+```bash
+git push -u origin $(git branch --show-current)
+```
 
-Полезные команды:
-`git branch -a` - показать список веток
-`git log --graph --oneline --decorate` - посмотреть историю коммитов в виде графика
-`git commit --ammend -m "Описание коммита"` - изменить описание последнего коммита.
-`git diff HEAD..origin/trunk` - посмотреть изменения между текущей веткой и trunk
+### Вносим изменения и добавляем их в отслеживаемые  
+```bash
+git add .
+git commit -m TASK-123 Добавлена важная доработка
+git push
+```
 
-![img.png](img.png)
+### Готовим ветку к Pull Request
+#### Вмёрдживаем основную ветку к себе
 
-![img_1.png](img_1.png)
+```bash
+git fetch
+git merge origin/trunk
+```
+
+#### Делаем squash (один из способов, как по мне самый простой)  
+```bash
+git reset --soft $(git merge-base trunk HEAD)
+git commit -m "TASK-123 Добавлен один красивый коммит"
+```
+
+#### Пушим свои изменения  
+```bash
+git push --force-with-lease
+```
+Альтернативно - это можно сделать в gitlab/github, там есть функциональность squash and merge.  
+
+## Полезные команды
+
+#### Показать список веток.
+```bash
+git branch -a
+```
+
+#### Посмотреть историю коммитов в виде графика
+```bash
+git log --graph --oneline --decorate
+```
+
+#### Изменить описание последнего коммита
+```bash
+git commit --ammend -m "Описание коммита"
+```
+
+#### Посмотреть изменения между текущей веткой и trunk
+```bash
+git diff HEAD..origin/trunk
+```
+
+## Линейная или нелинейная история 
+
+![liner.png](linear.png)
+
+![merge_commits.png](merge_commits.png)
