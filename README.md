@@ -23,6 +23,8 @@ git commit -m "TASK-123 Добавлен один красивый коммит"
 `git push --force-with-lease`
 Альтернативно - это можно сделать в gitlab/github, там есть функциональность squash and merge.
 
+321
+
 Полезные команды:
 `git branch -a` - показать список веток
 `git log --graph --oneline --decorate` - посмотреть историю коммитов в виде графика
