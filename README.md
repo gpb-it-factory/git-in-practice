@@ -1,5 +1,7 @@
 # git-in-practice
 
+TBD, CI, проектирование - как это всё связано
+
 Создаём ветку
 `git checkout -b feature/TASK-123 --no-track origin/trunk`
 Создаём ветку в origin
