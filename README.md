@@ -59,7 +59,7 @@ git log --graph --oneline --decorate
 
 #### Изменить описание последнего коммита
 ```bash
-git commit --ammend -m "Описание коммита"
+git commit --amend -m "Описание коммита"
 ```
 
 #### Посмотреть изменения между текущей веткой и trunk
